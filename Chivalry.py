@@ -11,8 +11,9 @@ while True:
         Misc.Pause(1000)
         Player.UnEquipItemByLayer('InnerTorso')
         Misc.Pause(1000)
-        Player.UseSkill("Meditation")
-        Misc.Pause(20000)
+        while Player.Mana < Player.ManaMax:
+            Player.UseSkill("Meditation")
+            Misc.Pause(5000)
         Player.EquipItem(calca)
         Misc.Pause(1000)
         Player.EquipItem(peitoral)
